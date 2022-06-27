@@ -1,14 +1,14 @@
 import React, { useEffect, useContext } from 'react'
 import CareersContext from '../../../context/careers/careersContext'
 import { FaRegDizzy } from "react-icons/fa";
-import jobsHelper from '../../../utils/jobsHelper';
-
+import { Link } from "react-router-dom";
 
 const Job = (props) => {
     const careersContext = useContext(CareersContext)
     const { getJob, selectedJob } = careersContext
     useEffect(() => {
         getJob(parseInt(props.id))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedJob])
     return (
         <section id='jobs' className="min-h-screen">
@@ -28,7 +28,7 @@ const Job = (props) => {
                             <h2 className='text-lg md:text-2xl'><span className='font-bold'>Job Description: </span></h2>
                             <p className='leading-relaxed tracking-wide'>{selectedJob.description}</p>
                             <div className="text-end">
-                            <a href="#" className='px-2 text-sm md:text-md md:px-6 p-2 pt-2 border-2 border-lightBlue text-lightBlue rounded-xl baseline hover:bg-lightBlue hover:text-white'>Apply Now</a>   
+                            <Link to="#" className='px-2 text-sm md:text-md md:px-6 p-2 pt-2 border-2 border-lightBlue text-lightBlue rounded-xl baseline hover:bg-lightBlue hover:text-white'>Apply Now</Link>   
                             </div>
                         </div>
                     ) : (

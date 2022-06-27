@@ -1,7 +1,8 @@
 import React from 'react'
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import logoWhite from '../../static/img/logo-white.png';
-import GoogleLogo from '../../static/svg/google';
+import { Link } from 'react-router-dom';
+
 const Footer = (props) => {
 
     return (
@@ -23,15 +24,15 @@ const Footer = (props) => {
                 </div>
                 <div className='flex justify-around space-x-32'>
                     <div className='flex flex-col space-y-3 text-white'>
-                        <a href='#' className='hover:text-veryDarkBlue'>Home</a>
-                        <a href='#' className='hover:text-veryDarkBlue'>Pricing</a>
-                        <a href='#' className='hover:text-veryDarkBlue'>Products</a>
-                        <a href='#' className='hover:text-veryDarkBlue'>About</a>
+                        <Link to='#' className='hover:text-veryDarkBlue'>Home</Link>
+                        <Link to='#' className='hover:text-veryDarkBlue'>Pricing</Link>
+                        <Link to='#' className='hover:text-veryDarkBlue'>Products</Link>
+                        <Link to='#' className='hover:text-veryDarkBlue'>About</Link>
                     </div>
                     <div className='flex flex-col space-y-3 text-white'>
-                        <a href='#' className='hover:text-veryDarkBlue'>Careers</a>
-                        <a href='#' className='hover:text-veryDarkBlue'>Community</a>
-                        <a href='#' className='hover:text-veryDarkBlue'>Privacy Policy</a>
+                        <Link to='#' className='hover:text-veryDarkBlue'>Careers</Link>
+                        <Link to='#' className='hover:text-veryDarkBlue'>Community</Link>
+                        <Link to='#' className='hover:text-veryDarkBlue'>Privacy Policy</Link>
                     </div>
                 </div>
                 <div className='flex flex-col justify-between'>

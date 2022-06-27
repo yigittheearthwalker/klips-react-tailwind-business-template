@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import CareersContext from '../../../context/careers/careersContext'
+import { Link } from "react-router-dom";
 
 const Jobs = () => {
     const careersContext = useContext(CareersContext);
@@ -7,6 +8,7 @@ const Jobs = () => {
 
     useEffect(() => {
         getJobs()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [jobs])
     return (
         <section id='jobs' className="min-h-screen">
@@ -23,7 +25,7 @@ const Jobs = () => {
                             <p><span className="font-bold text-lg">Type: </span>{job.type}</p>
                             <p className="grow"><span className="font-bold text-lg">Due Date: </span>{new Date(job.dueDate).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})}</p>
                             <div className="text-end">
-                            <a href={`jobs/${job.id}`} className='px-2 text-sm md:text-md md:px-6 p-2 pt-2 border-2 border-lightBlue text-lightBlue rounded-xl baseline hover:bg-lightBlue hover:text-white'>Read More</a>   
+                            <Link to={`/jobs/${job.id}`} className='px-2 text-sm md:text-md md:px-6 p-2 pt-2 border-2 border-lightBlue text-lightBlue rounded-xl baseline hover:bg-lightBlue hover:text-white'>Read More</Link>   
                             </div>
                         </div>
                         )

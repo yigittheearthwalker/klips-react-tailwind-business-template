@@ -1,5 +1,6 @@
 import React from 'react'
 import laptop from '../../static/svg/laptop.svg';
+import { Link } from "react-router-dom";
 const Hero = () => {
 
     return (
@@ -11,8 +12,8 @@ const Hero = () => {
                         <p className='text-md md:text-lg'>To keep up with maximum efficiency and boosted service quality</p>
                     </div>
                     <div className='flex space-x-3'>
-                        <a href='#' className='px-2 text-sm md:text-md md:px-6 p-2 pt-2 border-2 border-white text-white rounded-xl baseline hover:bg-green-500 hover:text-white'>Try For Free</a>
-                        <a href='#' className='px-2 text-sm md:text-md md:px-6 p-2 pt-2 border-2 border-white text-white rounded-xl baseline hover:bg-white hover:text-darkGrayishBlue'>Get In Touch</a>
+                        <Link to='#' className='px-2 text-sm md:text-md md:px-6 p-2 pt-2 border-2 border-white text-white rounded-xl baseline hover:bg-green-500 hover:text-white'>Try For Free</Link>
+                        <Link to='#' className='px-2 text-sm md:text-md md:px-6 p-2 pt-2 border-2 border-white text-white rounded-xl baseline hover:bg-white hover:text-darkGrayishBlue'>Get In Touch</Link>
                     </div>
                 </div>
                 <div className='px-12 flex md:flex-row h-1/3 items-center justify-center'>
@@ -22,7 +23,7 @@ const Hero = () => {
                     <div className=' flex flex-col px-6 py-6 bg-lightGray shadow-darkerLightGray rounded-md shadow-lg md:w-1/2'>
                         <p className='mb-3 text-lg'>Provide a creative and friendly work environment for your team. Make a change today</p>
                         <p className='mb-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  </p>
-                        <a className='underline underline-offset-4 text-lg text-black hover:text-darkBlue' href='#'>See Plans </a>
+                        <Link className='underline underline-offset-4 text-lg text-black hover:text-darkBlue' to='#'>See Plans </Link>
                     </div>
                 </div>
             </div>
